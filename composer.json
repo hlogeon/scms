@@ -22,7 +22,7 @@
     },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.0.2-dev"
+      "dev-master": "0.0.3-dev"
     }
   },
   "require-dev": {
@@ -33,7 +33,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Hlogeon\\Scms\\": "src/Scms"
+      "Hlogeon\\Scms\\": "src/Scms",
+      "Hlogeon\\Scms\\Http\\Controllers\\": "src/Scms/Http/Controllers"
     }
   }
 
