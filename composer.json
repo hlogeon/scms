@@ -36,7 +36,7 @@
       "src/Scms/Http/Controllers"
     ],
     "psr-4": {
-      "Hlogeon\\Scms\\": "scms/src/Scms/"
+      "Hlogeon\\Scms\\": "src/Scms/"
     }
   }
 
