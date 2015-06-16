@@ -38,7 +38,7 @@ class ScmsServiceProvider extends ServiceProvider{
             return Scms::instance();
         });
         $this->app->singleton('scms', 'Hlogeon\Scms\Scms');
-        include __DIR__.'/routes.php';
+        include __DIR__ . '/routes.php';
     }
 
 
