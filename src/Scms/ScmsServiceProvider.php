@@ -22,7 +22,6 @@ class ScmsServiceProvider extends ServiceProvider{
         $this->publishes([
             __DIR__.'/database/seeds/' => base_path('/database/seeds'),
         ], 'seeds');
-        Scms::instance()->router->registerRoutes();
     }
 
 
@@ -38,10 +37,7 @@ class ScmsServiceProvider extends ServiceProvider{
             return Scms::instance();
         });
         $this->app->singleton('scms', 'Hlogeon\Scms\Scms');
-        $this->app->bind('scms.router', function ()
-        {
-            return Scms::instance()->router;
-        });
+        include 'routes.php';
     }
 
 
