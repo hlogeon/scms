@@ -32,12 +32,12 @@ class Router
     public static $modelRoutes = [
         [
             'url'    => '{type}',
-            'action' => 'list',
+            'action' => 'listEntries',
             'method' => 'get'
         ],
         [
             'url'    => '{type}/{id}',
-            'action' => 'read',
+            'action' => 'readEntry',
             'method' => 'get'
         ],
     ];
@@ -76,7 +76,7 @@ class Router
 
         $this->laravelRouter->group([
             'prefix'    => $this->prefix,
-            'namespace' => 'Hlogoen\Scms\Controllers',
+            'namespace' => 'Hlogoen\Scms\Http\Controllers',
         ], function () use ($types)
         {
             if (empty($types)) $types = ['__empty_types__'];

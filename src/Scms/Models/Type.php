@@ -9,6 +9,7 @@
 namespace Hlogeon\Scms\Models;
 
 
+use Carbon\Carbon;
 use SleepingOwl\Models\SleepingOwlModel;
 
 /**
@@ -18,12 +19,17 @@ use SleepingOwl\Models\SleepingOwlModel;
  * @property int $id
  * @property string $name
  * @property string $alias
- *
+ * @property boolean $enable_in_menu
+ * @property boolean $enable_own_layout
+ * @property string $type_layout
+ * @property boolean $type_in_menu
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  *
  */
 class Type extends SleepingOwlModel{
 
-
+    protected $table = 'hlogeon_scms_types';
 
     public static function listAliases()
     {

@@ -37,7 +37,7 @@ class Scms {
     public static function instance()
     {
         if(is_null(static::$instance)){
-            app('\Hlogeon\Scms\Scms');
+            static::$instance = app('\Hlogeon\Scms\Scms');
         }
         return static::$instance;
     }
