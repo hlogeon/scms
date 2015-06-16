@@ -33,7 +33,7 @@
   },
   "autoload": {
     "classmap": [
-      "src/Scms/Http/Controllers/"
+      "src/Http/Controllers/"
     ],
     "psr-4": {
       "Hlogeon\\Scms\\": "scms/src/"
