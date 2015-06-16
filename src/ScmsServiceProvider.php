@@ -33,11 +33,6 @@ class ScmsServiceProvider extends ServiceProvider{
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/config/scms.php', 'scms');
-        $this->app->bindShared('Hlogeon\Scms\Scms', function ($app)
-        {
-            return Scms::instance();
-        });
-        $this->app->singleton('scms', 'Hlogeon\Scms\Scms');
         include __DIR__ . '/routes.php';
     }
 

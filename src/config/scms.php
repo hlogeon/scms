@@ -12,13 +12,13 @@ return [
     'list' => [
         'route' => 'list',
         'alias' => 'list',
-        'controller' => '\Hlogeon\Scms\Http\Controllers\SiteController',
+        'controller' => 'Hlogoen\Scms\Http\Controllers\SiteController',
         'action' => 'listEntries'
     ],
     'read' => [
         'route' => 'read',
         'alias' => 'read',
-        'controller' => '\Hlogeon\Scms\Http\Controllers\SiteController',
+        'controller' => 'Hlogoen\Scms\Http\Controllers\SiteController',
         'action' => 'readEntry'
     ],
 ];
