@@ -32,9 +32,11 @@
       "mockery/mockery": "0.9.*"
   },
   "autoload": {
+    "classmap": [
+      "src/Scms/Http/Controllers"
+    ],
     "psr-4": {
-      "Hlogeon\\Scms\\": "src/Scms",
-      "Hlogeon\\Scms\\Http\\Controllers\\": "src/Scms/Http/Controllers"
+      "Hlogeon\\Scms\\": "src/Scms"
     }
   }
 
