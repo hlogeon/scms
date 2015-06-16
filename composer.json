@@ -1,0 +1,12 @@
+{
+    "name": "hlogeon/scms",
+    "description": "Very simple CMS for laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Degtyaruk",
+            "email": "hlogeon1@gmail.com"
+        }
+    ],
+    "require": {}
+}
