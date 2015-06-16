@@ -15,7 +15,14 @@ class ScmsServiceProvider extends ServiceProvider{
 
     public function boot()
     {
-
+        $this->mergeConfigFrom(__DIR__.'/config/scms.php', 'scms');
+        $this->publishes([
+            __DIR__.'/database/migrations/' => base_path('/database/migrations'),
+        ], 'migrations');
+        $this->publishes([
+            __DIR__.'/database/seeds/' => base_path('/database/seeds'),
+        ], 'seeds');
+        Scms::instance()->router->registerRoutes();
     }
 
 
@@ -26,7 +33,15 @@ class ScmsServiceProvider extends ServiceProvider{
      */
     public function register()
     {
-        // TODO: Implement register() method.
+        $this->app->bindShared('Hlogeon\Scms\Scms', function ($app)
+        {
+            return Scms::instance();
+        });
+        $this->app->singleton('scms', 'Hlogeon\Scms\Scms');
+        $this->app->bind('scms.router', function ()
+        {
+            return Scms::instance()->router;
+        });
     }
 
 

@@ -11,6 +11,7 @@
     "minimum-stability": "dev",
     "require": {
         "illuminate/support": "5.*",
+        "illuminate/routing": "5.*",
         "illuminate/html": "~5.0",
         "bican/roles": "1.7.*",
         "fzaninotto/faker": "^1.5",
