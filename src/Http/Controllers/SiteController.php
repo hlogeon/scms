@@ -9,6 +9,7 @@
 namespace Hlogoen\Scms\Http\Controllers;
 
 
+use Hlogeon\Scms\Models\Page;
 use Hlogeon\Scms\Models\Type;
 use Illuminate\Routing\Controller;
 
@@ -17,15 +18,15 @@ class SiteController extends Controller{
 
     public function listEntries($type)
     {
-        var_dump($type); die();
+        $models = Page::where('type_id', $type)->all();
+        return $models;
     }
 
 
     public function readEntry($type, $id)
     {
-        var_dump([
-            $type, $id
-        ]);
+        $model = Page::where('type_id', $type)->where('id', $id)->first();
+        return $model;
     }
 
 }

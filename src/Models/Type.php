@@ -21,7 +21,8 @@ use SleepingOwl\Models\SleepingOwlModel;
  * @property string $alias
  * @property boolean $enable_in_menu
  * @property boolean $enable_own_layout
- * @property string $type_layout
+ * @property Layout $type_layout
+ * @property Layout $list_layout
  * @property boolean $type_in_menu
  * @property Carbon $created_at
  * @property Carbon $updated_at
@@ -40,6 +41,21 @@ class Type extends SleepingOwlModel{
             ];
         }
         return $dbList;
+    }
+
+    public function getList()
+    {
+        return static::lists('name', 'id');
+    }
+
+    public function typeLayout()
+    {
+        return $this->belongsTo('Hlogeon\Scms\Model\Layout', 'type_layout_id');
+    }
+
+    public function listLayout()
+    {
+        return $this->belongsTo('Hlogeon\Scms\Model\Layout', 'list_layout_id');
     }
 
 }
