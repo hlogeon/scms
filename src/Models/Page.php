@@ -81,7 +81,4 @@ class Page extends SleepingOwlModel implements SluggableInterface{
         return $this->type->typeLayout;
     }
 
-
-
-
 }
