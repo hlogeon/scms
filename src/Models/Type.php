@@ -50,12 +50,12 @@ class Type extends SleepingOwlModel{
 
     public function typeLayout()
     {
-        return $this->belongsTo('Hlogeon\Scms\Model\Layout', 'type_layout_id');
+        return $this->belongsTo('Hlogeon\Scms\Models\Layout', 'type_layout_id');
     }
 
     public function listLayout()
     {
-        return $this->belongsTo('Hlogeon\Scms\Model\Layout', 'list_layout_id');
+        return $this->belongsTo('Hlogeon\Scms\Models\Layout', 'list_layout_id');
     }
 
 }

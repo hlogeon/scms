@@ -18,7 +18,7 @@ class SiteController extends Controller{
 
     public function listEntries($type)
     {
-        $models = Page::where('type_id', $type)->all();
+        $models = Page::where('type_id', $type)->get();
         return $models;
     }
 

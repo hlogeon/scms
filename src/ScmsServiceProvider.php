@@ -33,6 +33,8 @@ class ScmsServiceProvider extends ServiceProvider{
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/config/scms.php', 'scms');
+        $this->app->register('Cviebrock\EloquentSluggable\SluggableServiceProvider');
+
         include __DIR__ . '/routes.php';
     }
 

@@ -70,7 +70,7 @@ class Page extends SleepingOwlModel implements SluggableInterface{
 
     public function getListLayoutAttribute()
     {
-        return $this->type->type_list_layout->path;
+        return $this->type->listLayout->path;
     }
 
     public function getLayoutAttribute()
@@ -78,7 +78,7 @@ class Page extends SleepingOwlModel implements SluggableInterface{
         if($this->type->enable_own_layout && $this->layout_id){
             return $this->layout;
         }
-        return $this->type->type_layout;
+        return $this->type->typeLayout;
     }
 
 
