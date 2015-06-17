@@ -38,15 +38,15 @@ class ScmsServiceProvider extends ServiceProvider{
         $this->app->register('SleepingOwl\Admin\AdminServiceProvider');
         $this->app->register('Illuminate\Html\HtmlServiceProvider');
         $loader = AliasLoader::getInstance();
-        $loader->alias('SleepingOwl\Admin\Admin', 'Admin');
-        $loader->alias('SleepingOwl\AdminAuth\Facades\AdminAuth', 'AdminAuth');
-        $loader->alias('SleepingOwl\Admin\Facades\AdminRouter', 'AdminRouter');
-        $loader->alias('SleepingOwl\Admin\AssetManager\AssetManager', 'AssetManager');
-        $loader->alias('SleepingOwl\Admin\Columns\Column', 'Column');
-        $loader->alias('SleepingOwl\Admin\Models\Form\FormItem', 'FormItem');
-        $loader->alias('SleepingOwl\Admin\Models\ModelItem', 'ModelItem');
-        $loader->alias('Illuminate\Html\FormFacade', 'FormFacade');
-        $loader->alias('Illuminate\Html\HtmlFacade', 'HtmlFacade');
+        $loader->alias('Admin', 'SleepingOwl\Admin\Admin');
+        $loader->alias('AdminAuth', 'SleepingOwl\AdminAuth\Facades\AdminAuth');
+        $loader->alias('AdminRouter', 'SleepingOwl\Admin\Facades\AdminRouter');
+        $loader->alias('AssetManager', 'SleepingOwl\Admin\AssetManager\AssetManager');
+        $loader->alias('Column', 'SleepingOwl\Admin\Columns\Column');
+        $loader->alias('FormItem', 'SleepingOwl\Admin\Models\Form\FormItem');
+        $loader->alias('ModelItem', 'SleepingOwl\Admin\Models\ModelItem');
+        $loader->alias('FormFacade', 'Illuminate\Html\FormFacade');
+        $loader->alias('HtmlFacade', 'Illuminate\Html\HtmlFacade');
         include __DIR__ . '/routes.php';
     }
 
