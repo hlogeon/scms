@@ -24,8 +24,11 @@ class ScmsServiceProvider extends ServiceProvider{
 //            __DIR__.'/src/admin/models' => base_path('/app/admin'),
 //        ], 'admin_models');
         $this->publishes([
-            __DIR__.'/src/admin' => base_path('/app/admin'),
+            __DIR__.'/admin' => base_path('/app/admin'),
         ], 'admin');
+        $this->publishes([
+            __DIR__.'/admin/models' => base_path('/app/admin'),
+        ], 'admin_models');
         $this->publishes([
             __DIR__.'/database/seeds/' => base_path('/database/seeds'),
         ], 'seeds');
