@@ -12,7 +12,7 @@
 						<input type="text" placeholder="Поиск">
 					</span>
         </div>
-        <a href="#" class="log-in btn">Войти</a>
+        <a href="{{route('login')}}" class="log-in btn">Войти</a>
     </div>
     <div class="clear"></div>
 </header>

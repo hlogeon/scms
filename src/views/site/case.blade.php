@@ -6,7 +6,9 @@
     <div class="case-cream-content">
         <div class="general-case">
             <div class="title">{{{$model->title}}}</div>
-            <div class="prof">Сфера - <a href="#">Программное обеспечение</a></div>
+            @if($model->business_area)
+                <div class="prof">Сфера - <a href="{{{route('area.view', ['id' => $model->business_area->id])}}}">{{{$model->business_area->title}}}</a></div>
+            @endif
         </div>
     </div>
     <div class="case-white-content">
