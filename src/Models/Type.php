@@ -63,4 +63,9 @@ class Type extends SleepingOwlModel{
         $this->belongsTo('Hlogeon\Scms\Models\Sidebar', 'sidebar');
     }
 
+    public function itemSidebar()
+    {
+        $this->belongsTo('Hlogeon\Scms\Models\Sidebar', 'item_sidebar');
+    }
+
 }

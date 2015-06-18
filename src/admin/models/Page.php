@@ -26,6 +26,9 @@ Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
     {
         // Describing elements in create and editing forms
         FormItem::text('title', 'Название');
+        FormItem::text('seo_title', 'SEO Title');
+        FormItem::textarea('seo_description', 'SEO Description');
+        FormItem::text('seo_keywords', 'SEO Keywords');
         FormItem::text('slug', 'Slug');
         FormItem::select('type.id', 'Тип')->list('\Hlogeon\Scms\Models\Type');
         FormItem::select('category.id', 'Категория')->list('\Hlogeon\Scms\Models\Category');
@@ -34,6 +37,5 @@ Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
         FormItem::checkbox('sidebar_in_layout', 'Сайдбар в шаблоне?');
         FormItem::checkbox('published', 'Опубликованно?');
         FormItem::ckeditor('content', 'Контент');
-        FormItem::ckeditor('sidebar', 'Контент сайдбара');
-
+        FormItem::select('sidebar.id', 'Сайдбар')->list('\Hlogeon\Scms\Models\Sidebar');
     });
