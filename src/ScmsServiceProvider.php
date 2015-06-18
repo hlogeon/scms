@@ -24,7 +24,6 @@ class ScmsServiceProvider extends ServiceProvider{
         $this->initAliases();
         foreach($this->aliases as $alias => $class){
             $loader->alias($alias, $class);
-//            $loader->alias($class, $alias);
         }
         $this->publishes([
             __DIR__.'/database/migrations/' => base_path('/database/migrations'),
@@ -35,9 +34,6 @@ class ScmsServiceProvider extends ServiceProvider{
         $this->publishes([
             __DIR__.'/admin' => base_path('/app/admin'),
         ], 'admin');
-        $this->publishes([
-            __DIR__.'/admin/models' => base_path('/app/admin'),
-        ], 'admin_models');
         $this->publishes([
             __DIR__.'/database/seeds/' => base_path('/database/seeds'),
         ], 'seeds');
