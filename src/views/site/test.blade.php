@@ -4,7 +4,7 @@
     <article class="post">
         <div class="title">{{$model->title}}</div>
         @if($model->second_title)
-        <p>Get more app store ratings and increase your rank without spamming your users.</p>
+        <p>{{{$model->second_title}}}</p>
         @endif
         <div class="article-info">
             <div class="person">

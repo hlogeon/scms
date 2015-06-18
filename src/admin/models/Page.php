@@ -26,6 +26,7 @@ Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
     {
         // Describing elements in create and editing forms
         FormItem::text('title', 'Название');
+        FormItem::text('second_title', 'Дополниетельная строка названия');
         FormItem::text('seo_title', 'SEO Title');
         FormItem::textarea('seo_description', 'SEO Description');
         FormItem::text('seo_keywords', 'SEO Keywords');

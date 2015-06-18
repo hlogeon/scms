@@ -29,7 +29,6 @@ Admin::model('\Hlogeon\Scms\Models\Type')->title('Типы')->as('page-type')
     FormItem::select('type_layout_id', 'Лэйаут страницы')->list('\Hlogeon\Scms\Models\Layout');
     FormItem::select('list_layout_id', 'Лэйаут списка')->list('\Hlogeon\Scms\Models\Layout');
     FormItem::select('sidebar', 'Сайдбар списка')->list('\Hlogeon\Scms\Models\Sidebar');
-    FormItem::select('itemSidebar.id', 'Сайдбар элемента')->list('\Hlogeon\Scms\Models\Sidebar');
+    FormItem::select('item_sidebar', 'Сайдбар элемента')->list('\Hlogeon\Scms\Models\Sidebar');
     FormItem::checkbox('type_in_menu', 'Отображать тип в меню?');
-
 });
