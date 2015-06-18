@@ -1,4 +1,4 @@
-@extends('site.layouts.blog')
+@extends('scms::site.layouts.blog')
 
 
 @section('content')

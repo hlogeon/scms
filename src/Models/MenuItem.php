@@ -28,6 +28,8 @@ class MenuItem extends SleepingOwlModel{
 
     protected $table = 'hlogeon_scms_menu_items';
 
+    protected $guarded = [];
+
     public static function getList()
     {
         return static::lists('name', 'id');

@@ -26,6 +26,8 @@ class Sidebar extends SleepingOwlModel{
 
     protected $table = 'hlogeon_scms_sidebars';
 
+    protected $guarded = [];
+
 
     public static function getList()
     {

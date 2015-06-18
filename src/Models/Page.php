@@ -46,6 +46,8 @@ class Page extends SleepingOwlModel implements SluggableInterface{
 
     protected $table = 'hlogeon_scms_pages';
 
+    protected $guarded = [];
+
     protected $sluggable = [
         'build_from' => 'title',
         'save_to' => 'slug',

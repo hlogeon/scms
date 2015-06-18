@@ -28,6 +28,8 @@ class Layout extends SleepingOwlModel{
 
     protected $table = 'hlogeon_scms_layouts';
 
+    protected $guarded = [];
+
 
     public static function getList()
     {

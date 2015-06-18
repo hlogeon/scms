@@ -29,4 +29,5 @@ Admin::menu()->label('Menu with subitems')->icon('fa-book')->items(function (){
     Admin::menu('\Hlogeon\Scms\Models\Layout')->icon('fa-cogs');
     Admin::menu('\Hlogeon\Scms\Models\MenuItem')->icon('fa-th-large');
     Admin::menu('\Hlogeon\Scms\Models\Sidebar')->icon('fa-code');
+    Admin::menu('\Hlogeon\Scms\Models\Footer')->icon('fa-asterisk');
 });

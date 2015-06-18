@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 @section('header')
-    @include('site.partials.header')
+    @include('scms::site.partials.header')
 @show
 
 <body class="bg-w">
@@ -30,7 +30,7 @@
         <div class="col-md-12 adm-content adm-cont-white advanced">
         <div class="wrapper">
             @section('content_menu')
-                @include('site.partials.menu')
+                @include('scms::site.partials.menu')
             @show
             <div class="white-content">
                 <div class="row wrapper-articles">

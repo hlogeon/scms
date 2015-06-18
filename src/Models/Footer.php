@@ -26,4 +26,6 @@ class Footer extends SleepingOwlModel{
 
     protected $table = 'hlogeon_scms_footers';
 
+    protected $guarded = [];
+
 }

@@ -6,6 +6,9 @@
  * Time: 11:34 AM
  */
 
+use \SleepingOwl\Admin\Admin;
+use \SleepingOwl\Admin\Columns\Column;
+use \SleepingOwl\Admin\Models\Form\FormItem;
 
 Admin::model('\Hlogeon\Scms\Models\MenuItem')->title('Пункты меню')->as('menu-item')
     ->columns(function ()

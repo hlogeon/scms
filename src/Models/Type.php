@@ -32,15 +32,11 @@ class Type extends SleepingOwlModel{
 
     protected $table = 'hlogeon_scms_types';
 
+    protected $guarded = [];
+
     public static function listAliases()
     {
-        $dbList = static::lists('alias', 'id');
-        if(empty($dbList)){
-            $dbList = [
-                'Page',
-            ];
-        }
-        return $dbList;
+        return static::lists('alias', 'id');
     }
 
     public static function getList()
