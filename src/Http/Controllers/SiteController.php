@@ -26,8 +26,10 @@ class SiteController extends Controller{
 
     public function readEntry($type, $id)
     {
-        $model = Page::where('type_id', $type)->where('id', $id)->first();
-        return $model;
+        $type = $this->getType($type);
+        $model = Page::where('type_id', $type->id)->where('id', $id)->first();
+        return \View::make('scms::'.$model->layout->path, compact('model', 'type'));
+
     }
 
 

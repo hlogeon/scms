@@ -26,8 +26,8 @@ Admin::model('\Hlogeon\Scms\Models\Type')->title('Типы')->as('page-type')
     FormItem::checkbox('enable_in_menu', 'Разрешить добавлять в меню?');
     FormItem::checkbox('enable_own_layout', 'Разрешить собственный лэйаут для каждой страницы?');
     FormItem::checkbox('enable_own_sidebar', 'Разрешить собственный сайдбар для каждой страницы?');
-    FormItem::select('typeLayout.id', 'Лэйаут страницы')->list('\Hlogeon\Scms\Models\Layout');
-    FormItem::select('listLayout.id', 'Лэйаут списка')->list('\Hlogeon\Scms\Models\Layout');
+    FormItem::select('type_layout_id', 'Лэйаут страницы')->list('\Hlogeon\Scms\Models\Layout');
+    FormItem::select('list_layout_id', 'Лэйаут списка')->list('\Hlogeon\Scms\Models\Layout');
     FormItem::select('sidebar', 'Сайдбар списка')->list('\Hlogeon\Scms\Models\Sidebar');
     FormItem::select('itemSidebar.id', 'Сайдбар элемента')->list('\Hlogeon\Scms\Models\Sidebar');
     FormItem::checkbox('type_in_menu', 'Отображать тип в меню?');

@@ -32,7 +32,7 @@ Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
         FormItem::text('slug', 'Slug');
         FormItem::select('type.id', 'Тип')->list('\Hlogeon\Scms\Models\Type');
         FormItem::select('category.id', 'Категория')->list('\Hlogeon\Scms\Models\Category');
-        FormItem::select('layout.id', 'Лэйаут')->list('\Hlogeon\Scms\Models\Layout');
+        FormItem::select('layout_id', 'Лэйаут')->list('\Hlogeon\Scms\Models\Layout');
         FormItem::checkbox('in_menu', 'Отображать в меню?');
         FormItem::checkbox('sidebar_in_layout', 'Сайдбар в шаблоне?');
         FormItem::checkbox('published', 'Опубликованно?');
