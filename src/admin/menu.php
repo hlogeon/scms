@@ -23,8 +23,10 @@ Admin::menu()->url('/')
     ->uses('\SleepingOwl\Admin\Controllers\DummyController@getIndex');
 
 Admin::menu()->label('Menu with subitems')->icon('fa-book')->items(function (){
-    Admin::menu('\Hlogeon\Scms\Models\Page')->icon('fa-page');
-    Admin::menu('\Hlogeon\Scms\Models\Category')->icon('fa-page');
-    Admin::menu('\Hlogeon\Scms\Models\Type')->icon('fa-page');
-    Admin::menu('\Hlogeon\Scms\Models\Layout')->icon('fa-page');
+    Admin::menu('\Hlogeon\Scms\Models\Page')->icon('fa-file');
+    Admin::menu('\Hlogeon\Scms\Models\Category')->icon('fa-list-alt');
+    Admin::menu('\Hlogeon\Scms\Models\Type')->icon('fa-bars');
+    Admin::menu('\Hlogeon\Scms\Models\Layout')->icon('fa-cogs');
+    Admin::menu('\Hlogeon\Scms\Models\MenuItem')->icon('fa-th-large');
+    Admin::menu('\Hlogeon\Scms\Models\Sidebar')->icon('fa-code');
 });
