@@ -125,8 +125,8 @@ class Page extends SleepingOwlModel implements SluggableInterface, ModelWithImag
     public function getImageFields()
     {
         return [
-            'image' => 'posts/images',
-            'background' => 'posts/backgrounds',
+            'image' => 'posts/images/',
+            'background' => 'posts/backgrounds/',
         ];
     }
 
