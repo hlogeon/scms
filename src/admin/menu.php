@@ -17,10 +17,7 @@
 use \SleepingOwl\Admin\Admin;
 
 
-Admin::menu()->url('/')
-    ->label('Start page')
-    ->icon('fa-dashboard')
-    ->uses('\SleepingOwl\Admin\Controllers\DummyController@getIndex');
+Admin::menu('\App\User')->icon('fa-user');
 
 Admin::menu()->label('Menu with subitems')->icon('fa-book')->items(function (){
     Admin::menu('\Hlogeon\Scms\Models\Page')->icon('fa-file');

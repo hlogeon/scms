@@ -37,5 +37,7 @@ Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
         FormItem::checkbox('sidebar_in_layout', 'Сайдбар в шаблоне?');
         FormItem::checkbox('published', 'Опубликованно?');
         FormItem::ckeditor('content', 'Контент');
-        FormItem::select('sidebar.id', 'Сайдбар')->list('\Hlogeon\Scms\Models\Sidebar');
+        FormItem::text('reading_time', 'Время чтения');
+        FormItem::select('sidebar', 'Сайдбар')->list('\Hlogeon\Scms\Models\Sidebar');
+        FormItem::select('user.id', 'Пользователь')->list('\App\User');
     });
