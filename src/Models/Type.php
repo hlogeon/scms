@@ -43,7 +43,7 @@ class Type extends SleepingOwlModel{
         return $dbList;
     }
 
-    public function getList()
+    public static function getList()
     {
         return static::lists('name', 'id');
     }

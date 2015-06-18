@@ -6,6 +6,10 @@
  * Time: 6:31 AM
  */
 
+use \SleepingOwl\Admin\Admin;
+use \SleepingOwl\Admin\Columns\Column;
+use \SleepingOwl\Admin\Models\Form\FormItem;
+
 Admin::model('\Hlogeon\Scms\Models\Category')->title('Категории')->as('page-categories')
     ->with('parent')
     ->columns(function ()

@@ -6,6 +6,9 @@
  * Time: 6:17 AM
  */
 
+use \SleepingOwl\Admin\Admin;
+use \SleepingOwl\Admin\Columns\Column;
+use \SleepingOwl\Admin\Models\Form\FormItem;
 
 Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
     ->with('layout', 'category', 'type')
@@ -13,10 +16,10 @@ Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
     {
         // Describing columns for table view
         Column::string('id', 'ID');
-        Column::string('name', 'Название');
+        Column::string('title', 'Название');
         Column::string('slug', 'Slug');
         Column::string('type.name', 'Тип');
-        Column::string('category.name', 'Категория');
+        Column::lists('category.name', 'Категория');
         Column::string('layout.name', 'Лэйаут');
 //    Column::string('alias', 'Алиас');
     })->form(function ()

@@ -14,6 +14,8 @@
  * 			Admin::menu()->url('my-page')->label('My custom page')->uses('\MyController@getMyPage');
  * 		});
  */
+use \SleepingOwl\Admin\Admin;
+
 
 Admin::menu()->url('/')
     ->label('Start page')

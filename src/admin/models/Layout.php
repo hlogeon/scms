@@ -6,6 +6,10 @@
  * Time: 5:39 AM
  */
 
+use \SleepingOwl\Admin\Admin;
+use \SleepingOwl\Admin\Columns\Column;
+use \SleepingOwl\Admin\Models\Form\FormItem;
+
 Admin::model('\Hlogeon\Scms\Models\Layout')->title('Лэйауты')->as('page-layout')
     ->columns(function ()
 {

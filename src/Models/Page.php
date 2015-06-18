@@ -81,4 +81,9 @@ class Page extends SleepingOwlModel implements SluggableInterface{
         return $this->type->typeLayout;
     }
 
+    public static function getList()
+    {
+        return static::lists('title', 'id');
+    }
+
 }
