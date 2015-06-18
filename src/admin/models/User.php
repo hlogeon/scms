@@ -22,6 +22,7 @@ Admin::model('\App\User')->title('Пользователи')->as('user')
         // Describing elements in create and editing forms
         FormItem::text('name', 'Имя');
         FormItem::text('email', 'Email');
+        FormItem::text('company_info', 'Компания и должность');
         FormItem::password('password', 'Пароль');
         FormItem::image('profile_image', 'Аватар');
         FormItem::ckeditor('info', 'Информация');

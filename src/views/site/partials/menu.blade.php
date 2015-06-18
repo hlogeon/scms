@@ -1,5 +1,7 @@
 <?php
-$pages = \Hlogeon\Scms\Models\Page::where('in_menu', true)->where('published', true)->get();
+$pages = \Hlogeon\Scms\Models\Page::where('in_menu', true)
+        ->where('published', true)
+        ->get();
 $types = \Hlogeon\Scms\Models\Type::where('type_in_menu', true)->get();
 $menuItems = \Hlogeon\Scms\Models\MenuItem::where('published', true)->get();
 $routePrefix = config('scms.route_prefix') !== '' ? config('scms.route_prefix').'.' : '';
