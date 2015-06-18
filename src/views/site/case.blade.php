@@ -6,8 +6,9 @@
     <div class="case-cream-content">
         <div class="general-case">
             <div class="title">{{{$model->title}}}</div>
-            @if($model->business_area)
-                <div class="prof">Сфера - <a href="{{{route('area.view', ['id' => $model->business_area->id])}}}">{{{$model->business_area->title}}}</a></div>
+            @if($model->business_area_id)
+                <?php $businessArea = \App\BusinessArea::find($model->business_area_id) ?>
+                <div class="prof">Сфера - <a href="{{{route('area.view', ['id' => $model->business_area_id])}}}">{{{$businessArea->title}}}</a></div>
             @endif
         </div>
     </div>
