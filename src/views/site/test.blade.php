@@ -31,15 +31,15 @@
         <div class="description">
             <div class="title">{{{$model->user->name}}}, {{{$model->user->company_info}}}</div>
             {!! $model->user->info !!}
-            <div class="socials">
-                <span>Социальные сети:</span>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
+            {{--<div class="socials">--}}
+                {{--<span>Социальные сети:</span>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="#"></a></li>--}}
+                    {{--<li><a href="#"></a></li>--}}
+                    {{--<li><a href="#"></a></li>--}}
+                    {{--<li><a href="#"></a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
         </div>
         <div class="clear"></div>
     </div>
