@@ -18,8 +18,9 @@ class SiteController extends Controller{
 
     public function listEntries($type)
     {
-        $models = Page::where('type_id', $type)->get();
-        return $models;
+        $type = $this->getType($type);
+        $models = Page::where('type_id', $type->id)->get();
+        return \View::make('scms::'.$this->getListLayout($type), compact('models', 'type'));
     }
 
 
@@ -27,6 +28,18 @@ class SiteController extends Controller{
     {
         $model = Page::where('type_id', $type)->where('id', $id)->first();
         return $model;
+    }
+
+
+    protected function getType($type)
+    {
+        return Type::find($type);
+    }
+
+
+    protected function getListLayout(Type $type)
+    {
+        return $type->listLayout->path;
     }
 
 }

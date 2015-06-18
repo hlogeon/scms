@@ -33,7 +33,7 @@ use SleepingOwl\Models\SleepingOwlModel;
  * @property string $title
  * @property string $slug
  * @property string $content
- * @property string $sidebar
+ * @property Sidebar $sidebar
  *
  *
  * * * * * Calculable attributes
@@ -84,6 +84,33 @@ class Page extends SleepingOwlModel implements SluggableInterface{
     public static function getList()
     {
         return static::lists('title', 'id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+
+    public function sidebar()
+    {
+        return $this->belongsTo(Sidebar::class, 'sidebar');
+    }
+
+
+    public function getSidebar()
+    {
+        if(!$this->type->enable_own_sidebar){
+            if($this->type->item_sidebar)
+                return Sidebar::find($this->type->item_sidebar)->content;
+            return false;
+        }
+        if($this->sidebar)
+            return $this->sidebar->content;
+
+        if($this->type->item_sidebar)
+            return Sidebar::find($this->type->item_sidebar)->content;
+        return false;
     }
 
 }

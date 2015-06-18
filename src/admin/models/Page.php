@@ -25,7 +25,7 @@ Admin::model('\Hlogeon\Scms\Models\Page')->title('Страницы')->as('page')
     })->form(function ()
     {
         // Describing elements in create and editing forms
-        FormItem::text('name', 'Название');
+        FormItem::text('title', 'Название');
         FormItem::text('slug', 'Slug');
         FormItem::select('type.id', 'Тип')->list('\Hlogeon\Scms\Models\Type');
         FormItem::select('category.id', 'Категория')->list('\Hlogeon\Scms\Models\Category');

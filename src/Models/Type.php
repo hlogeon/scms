@@ -58,4 +58,9 @@ class Type extends SleepingOwlModel{
         return $this->belongsTo('Hlogeon\Scms\Models\Layout', 'list_layout_id');
     }
 
+    public function sidebar()
+    {
+        $this->belongsTo('Hlogeon\Scms\Models\Sidebar', 'sidebar');
+    }
+
 }

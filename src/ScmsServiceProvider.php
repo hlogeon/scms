@@ -19,6 +19,7 @@ class ScmsServiceProvider extends ServiceProvider{
     public function boot()
     {
         $this->mergeConfigFrom(__DIR__.'/config/scms.php', 'scms');
+        $this->loadViewsFrom(__DIR__.'/views', 'scms');
         $loader = AliasLoader::getInstance();
         $this->initAliases();
         foreach($this->aliases as $alias => $class){
@@ -28,9 +29,9 @@ class ScmsServiceProvider extends ServiceProvider{
         $this->publishes([
             __DIR__.'/database/migrations/' => base_path('/database/migrations'),
         ], 'migrations');
-//        $this->publishes([
-//            __DIR__.'/src/admin/models' => base_path('/app/admin'),
-//        ], 'admin_models');
+        $this->publishes([
+            __DIR__.'/views' => base_path('/resources/views/vendor/hlogeon/scms'),
+        ], 'views');
         $this->publishes([
             __DIR__.'/admin' => base_path('/app/admin'),
         ], 'admin');
