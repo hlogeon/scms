@@ -24,7 +24,7 @@
     </article>
     <div class="about-person">
         @if(!$model->user->profile_image->thumbnail('medium'))
-            <img src="{{asset('/img/post-profile.png')}}" height="150" width="150" class="about-profile">
+            <img src="{{asset('/img/post-profile.png')}}" class="about-profile">
         @else
             <img src="{{{$model->user->profile_image->thumbnail('medium')}}}" height="150" width="150" class="about-profile">
         @endif

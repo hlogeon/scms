@@ -8,7 +8,9 @@
             <div class="title">{{{$model->title}}}</div>
             @if($model->business_area_id)
                 <?php $businessArea = \App\BusinessArea::find($model->business_area_id) ?>
-                <div class="prof">Сфера - <a href="{{{route('area.view', ['id' => $model->business_area_id])}}}">{{{$businessArea->title}}}</a></div>
+                    @if($businessArea instanceof \App\BusinessArea)
+                        <div class="prof">Сфера - <a href="{{{route('area.view', ['id' => $model->business_area_id])}}}">{{{$businessArea->title}}}</a></div>
+                    @endif
             @endif
         </div>
     </div>
