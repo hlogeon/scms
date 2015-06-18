@@ -1,6 +1,7 @@
 {
     "name": "hlogeon/scms",
     "description": "Very simple CMS for laravel",
+    "version": "0.5.0-alpha",
     "license": "MIT",
     "authors": [
         {
