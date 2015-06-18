@@ -11,7 +11,9 @@ namespace Hlogeon\Scms\Models;
 
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
+use SleepingOwl\Models\Interfaces\ModelWithImageFieldsInterface;
 use SleepingOwl\Models\SleepingOwlModel;
+use SleepingOwl\Models\Traits\ModelWithImageOrFileFieldsTrait;
 
 /**
  * Class Page
@@ -40,9 +42,9 @@ use SleepingOwl\Models\SleepingOwlModel;
  *
  * @property string $list_layout
  */
-class Page extends SleepingOwlModel implements SluggableInterface{
+class Page extends SleepingOwlModel implements SluggableInterface, ModelWithImageFieldsInterface{
 
-    use SluggableTrait;
+    use SluggableTrait, ModelWithImageOrFileFieldsTrait;
 
     protected $table = 'hlogeon_scms_pages';
 
@@ -107,12 +109,25 @@ class Page extends SleepingOwlModel implements SluggableInterface{
                 return Sidebar::find($this->type->item_sidebar)->content;
             return false;
         }
-        if($this->sidebar)
-            return $this->sidebar->content;
+        if($this->sidebar) {
+            if ($this->sidebar instanceof Sidebar)
+                return $this->sidebar->content;
+            else
+                return Sidebar::find($this->sidebar)->content;
+        }
 
         if($this->type->item_sidebar)
             return Sidebar::find($this->type->item_sidebar)->content;
         return false;
+    }
+
+
+    public function getImageFields()
+    {
+        return [
+            'image' => 'posts/images',
+            'background' => 'posts/backgrounds',
+        ];
     }
 
 }
