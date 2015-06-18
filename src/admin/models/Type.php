@@ -28,8 +28,8 @@ Admin::model('\Hlogeon\Scms\Models\Type')->title('Типы')->as('page-type')
     FormItem::checkbox('enable_own_sidebar', 'Разрешить собственный сайдбар для каждой страницы?');
     FormItem::select('typeLayout.id', 'Лэйаут страницы')->list('\Hlogeon\Scms\Models\Layout');
     FormItem::select('listLayout.id', 'Лэйаут списка')->list('\Hlogeon\Scms\Models\Layout');
-    FormItem::select('sidebar.id', 'Сайдбар списка')->list('\Hlogeon\Scms\Models\Sidebar');
-    FormItem::select('item_sidebar.id', 'Сайдбар элемента')->list('\Hlogeon\Scms\Models\Sidebar');
+    FormItem::select('sidebar', 'Сайдбар списка')->list('\Hlogeon\Scms\Models\Sidebar');
+    FormItem::select('itemSidebar.id', 'Сайдбар элемента')->list('\Hlogeon\Scms\Models\Sidebar');
     FormItem::checkbox('type_in_menu', 'Отображать тип в меню?');
 
 });
