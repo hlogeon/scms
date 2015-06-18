@@ -19,7 +19,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            {!! $model->additional->content !!}
+            {!! $model->additional_content !!}
         </div>
     </div>
 
