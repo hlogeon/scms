@@ -4,7 +4,7 @@
         <span class="logo-title">Автоматизация маркетинга местного бизнеса</span>
     </div>
     <div class="contact">
-        <b>Вопросы? <span class="num">+7 (495) 105-93-75</span></b>
+        <b><span class="ask">Вопросы?</span> <span class="num">+7 (495) 105-93-75</span></b>
         <span class="pull-search"></span>
         <div class="wrapper-search-inter">
 					<span class="search-inter">
