@@ -17,10 +17,10 @@
                 @show
                 <div class="white-content">
                     <div class="row wrapper-articles">
-                        <div class="col-md-8 section-articles">
+                        <div class="col-md-9 section-articles">
                             @yield('content')
                         </div>
-                        <div class="col-md-4 side-bar-r">
+                        <div class="col-md-3 side-bar-r">
                             @section('sidebar')
                                 @if(isset($model))
                                     @if($model->getSidebar() !== false)
@@ -28,7 +28,7 @@
                                     @else
                                         <div class="title">Заголовок блока</div>
                                         <ul>
-                                            <li><a href="" class="active">Элемент меню</a></li>
+                                            <li><a href="">Элемент меню</a></li>
                                             <li><a href="">Элемент меню</a></li>
                                             <li><a href="">Элемент меню</a></li>
                                         </ul>
@@ -39,7 +39,7 @@
                                     @else
                                         <div class="title">Заголовок блока</div>
                                         <ul>
-                                            <li><a href="" class="active">Элемент меню</a></li>
+                                            <li><a href="">Элемент меню</a></li>
                                             <li><a href="">Элемент меню</a></li>
                                             <li><a href="">Элемент меню</a></li>
                                         </ul>
