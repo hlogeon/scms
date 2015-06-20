@@ -9,6 +9,7 @@ $pageRoute = $routePrefix . config('scms.read.alias');
 $typeRoute = $routePrefix . config('scms.list.alias');
 ?>
 <div class="adm-path">
+    <span class="n-pull"></span>
     <ul class="path-list">
         @foreach($pages as $page)
             <li><a href="{{route($pageRoute, ['id' => $page->id, 'model' => $page->type_id])}}">{{{$page->title}}}</a></li>
