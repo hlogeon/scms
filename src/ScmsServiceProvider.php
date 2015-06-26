@@ -36,6 +36,9 @@ class ScmsServiceProvider extends ServiceProvider{
         $this->publishes([
             __DIR__.'/database/seeds/' => base_path('/database/seeds'),
         ], 'seeds');
+        $this->publishes([
+            __DIR__.'/public/' => base_path('/public/'),
+        ], 'assets');
 
         $this->loadViewsFrom(base_path('/resources/views/vendor/hlogeon/scms'), 'scms');
     }
