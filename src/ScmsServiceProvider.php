@@ -19,7 +19,6 @@ class ScmsServiceProvider extends ServiceProvider{
     public function boot()
     {
         $this->mergeConfigFrom(__DIR__.'/config/scms.php', 'scms');
-        $this->loadViewsFrom(__DIR__.'/views', 'scms');
         $loader = AliasLoader::getInstance();
         $this->initAliases();
         foreach($this->aliases as $alias => $class){
@@ -37,6 +36,8 @@ class ScmsServiceProvider extends ServiceProvider{
         $this->publishes([
             __DIR__.'/database/seeds/' => base_path('/database/seeds'),
         ], 'seeds');
+
+        $this->loadViewsFrom(base_path('/resources/views/vendor/hlogeon/scms'), 'scms');
     }
 
 
