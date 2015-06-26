@@ -21,4 +21,4 @@
  * 		});
  */
 
-\SleepingOwl\Admin\Models\Form\FormItem::register('code', '\Hlogoen\Scms\FormItems');
+\SleepingOwl\Admin\Models\Form\FormItem::register('code', '\Hlogoen\Scms\FormItems\CodeEditor');
