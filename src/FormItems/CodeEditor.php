@@ -15,9 +15,19 @@ use SleepingOwl\Admin\Models\Form\FormItem\Textarea;
 class CodeEditor extends Textarea{
 
 
+    public function __construct($name = null, $label = null, $id = null)
+    {
+        parent::__construct($name, $label);
+        if($id !== null){
+            $this->attributes['id'] = $id;
+        }
+    }
+
     public function render()
     {
-        AssetManager::addScript(asset('/js/ace.js'));
+        AssetManager::addStyle(asset('/css/codemirror.css'));
+        AssetManager::addScript(asset('/js/codemirror.js'));
+        AssetManager::addScript(asset('/js/mode/hmlmixed/htmlmixed.js'));
         AssetManager::addScript(asset('/js/code-editor.js'));
         if ( ! isset($this->attributes['class']))
         {

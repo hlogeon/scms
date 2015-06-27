@@ -1,6 +1,11 @@
 $(document).ready(function(){
     var codeEditor = $('.code-editor');
     for(var i = 0; i < codeEditor.length; i++){
-        ace.edit(codeEditor[i].id);
+        $(codeEditor[i]).css('min-height', '300px');
+        var editor = CodeMirror.fromTextArea(codeEditor[i], {
+            lineNumbers: true,
+            mode: "htmlmixed"
+        });
+
     }
 });
