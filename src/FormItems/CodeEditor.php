@@ -27,6 +27,9 @@ class CodeEditor extends Textarea{
     {
         AssetManager::addStyle(asset('/css/codemirror.css'));
         AssetManager::addScript(asset('/js/codemirror.js'));
+        AssetManager::addScript(asset('/js/mode/css/css.js'));
+        AssetManager::addScript(asset('/js/mode/xml/xml.js'));
+        AssetManager::addScript(asset('/js/mode/javascript/javascript.js'));
         AssetManager::addScript(asset('/js/mode/hmlmixed/htmlmixed.js'));
         AssetManager::addScript(asset('/js/code-editor.js'));
         if ( ! isset($this->attributes['class']))
