@@ -19,6 +19,6 @@ Admin::model('\Hlogeon\Scms\Models\Sidebar')->title('Сайдбар')->as('sideb
     })->form(function ()
     {
         // Describing elements in create and editing forms
-        FormItem::ckeditor('content', 'Контент');
+        FormItem::code('content', 'Контент');
 
     });

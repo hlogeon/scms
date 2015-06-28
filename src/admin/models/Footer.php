@@ -20,7 +20,7 @@ Admin::model('\Hlogeon\Scms\Models\Footer')->title('Footer')->as('footer')
     })->form(function ()
     {
         // Describing elements in create and editing forms
-        FormItem::ckeditor('content', 'Контент');
+        FormItem::code('content', 'Контент');
         FormItem::checkbox('active', 'Активен?');
 
     });

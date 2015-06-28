@@ -20,8 +20,9 @@ Admin::model('\Hlogeon\Scms\Models\Layout')->title('Лэйауты')->as('page-l
 //    Column::string('alias', 'Алиас');
 })->form(function ()
 {
-    // Describing elements in create and editing forms
     FormItem::text('name', 'Название');
     FormItem::text('path', 'Путь');
+    FormItem::checkbox('has_sidebar', 'Есть сайдбар?');
+    FormItem::code('sidebar', 'Сайдбар');
 
 });

@@ -14,14 +14,15 @@ use SleepingOwl\Admin\Models\Form\FormItem\Textarea;
 
 class CodeEditor extends Textarea{
 
+    public $value;
 
-    public function __construct($name = null, $label = null, $id = null)
+    public function __construct($name = null, $label = null, $value = null)
     {
         parent::__construct($name, $label);
-        if($id !== null){
-            $this->attributes['id'] = $id;
-        }
+        $this->value = $value;
     }
+
+
 
     public function render()
     {
