@@ -38,7 +38,7 @@ class CodeEditor extends Textarea{
             $this->attributes['class'] = '';
         }
         $this->attributes['class'] .= ' code-editor';
-        return parent::render();
+        return $this->formBuilder->textareaGroup($this->name, $this->label, $this->value, $this->attributes);
     }
 
 }
