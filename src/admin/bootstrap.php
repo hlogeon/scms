@@ -1,5 +1,8 @@
 <?php
 
+
+use \SleepingOwl\Admin\Models\Form\FormItem;
+
 /*
  * Describe you custom columns and form items here.
  *
@@ -21,4 +24,17 @@
  * 		});
  */
 
-\SleepingOwl\Admin\Models\Form\FormItem::register('code', '\Hlogoen\Scms\FormItems\CodeEditor');
+FormItem::register('code', function(Eloquent $model){
+    $name = '';
+    $label = '';
+    if($model instanceof \Hlogeon\Scms\Models\Sidebar || $model instanceof \Hlogeon\Scms\Models\Footer){
+        $name = 'content';
+        $label = 'Контент';
+    }
+    if($model instanceof \Hlogeon\Scms\Models\Layout){
+        $name = 'sidebar';
+        $label = 'Сайдбар';
+    }
+    $editor = new \Hlogoen\Scms\FormItems\CodeEditor($name, $label, $model->content);
+    return $editor->render();
+});
